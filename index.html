@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <section class="content main__content">
+            <h1 class="content__title">Learn to code by watching others</h1>
+            <p class="content__paragraph">
+                See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                but understanding how developers think is invaluable.
+            </p>
+        </section>
+        <section class="form-container main__form-container">
+            <div class="ads-card">
+                <p class="ads-card__text"><span class="ads-card__text--highlighted">Try it free 7 days </span>then $20/mo. thereafter</p>
+            </div>
+            <form action="#" class="form">
+                <div class="form__input-container">
+                    <label for="firstName" class="form__label sr-only">First Name:</label>
+                    <input type="text" id="firstName" class="form__input" placeholder="First Name" required>
+                    <p id="firstNameErrorMessage" class="form__error-message"></p>
+                </div>
+                <div class="form__input-container">
+                    <label for="lastName" class="form__label sr-only">Last Name:</label>
+                    <input type="text" id="lastName" class="form__input" placeholder="Last Name" required>
+                    <p id="lastNameErrorMessage" class="form__error-message"></p>
+                </div>
+                <div class="form__input-container">
+                    <label for="emailAddress" class="form__label sr-only">Email Address:</label>
+                    <input type="email" id="emailAddress" class="form__input" placeholder="Email Address" required>
+                    <p id="emailAddressErrorMessage" class="form__error-message"></p>
+                </div>
+                <div class="form__input-container">
+                    <label for="password" class="form__label sr-only">Password:</label>
+                    <input type="password" id="password" class="form__input" placeholder="Password" required>
+                    <p id="passwordErrorMessage" class="form__error-message"></p>
+                </div>
+                <button type="submit" id="formBtn" class="btn form__btn">Claim your free trial</button>
+                <small class="form__notice">By clicking the button, you are agreeing to our <a href="#" class="form__notice-link">Terms and Services</a></small>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
