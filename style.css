@@ -1,0 +1,306 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    min-height: 100vh;
+  }
+  
+  body {
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  :root {
+  
+    /* primary colors */
+    --green: hsl(154, 59%, 51%);
+    --red: hsl(0, 100%, 74%);
+
+    /* neutral colors */
+    --gray_blue: hsl(246, 25%, 77%);
+    --dark_blue: hsl(249, 10%, 26%);
+    --soft-dark_blue: hsla(249, 10%, 26%, 70%);
+
+    /* accent colors */
+    --blue: hsl(248, 32%, 49%);
+
+    /* box-shadows */
+    --blue-shadow: 0rem 0.5rem hsla(248, 22%, 30%, 40%);
+    --green-btn: hsl(154, 59%, 46%);
+
+    /* font-weights */
+    --regular: 400;
+    --medium: 500;
+    --semibold: 500;
+    --bold: 600;
+  
+  }
+
+  body {
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-attachment: fixed;
+    background-color: var(--red);
+  }
+
+  .main {
+    display: grid;
+    gap: 1.5625rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin: 6rem 1.5rem;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content__title {
+    font-size: 1.8rem;
+    font-weight: var(--bold);
+    line-height: 1.25em;
+    max-width: 15ch;
+    margin: 0 auto;
+    margin-bottom: 1.75rem;
+  }
+
+  .content__paragraph {
+    max-width: 50ch;
+  }
+
+  .form-container {
+    display: grid;
+    gap: 1.5625rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .form-container__ads-card {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .ads-card {
+    text-align: center;
+    padding: 1.5rem 3rem;
+    border-radius: 0.625rem;
+    background-color: var(--blue);
+    box-shadow: var(--blue-shadow);
+  }
+
+  .ads-card__text--highlighted {
+    font-weight: var(--bold);
+  }
+
+  .form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    padding: 1.5625rem;
+    min-height: 30.6875rem;
+    border-radius: 0.625rem;
+    background-color: white;
+    box-shadow: var(--blue-shadow);
+  }
+
+  .form__input-container {
+    position: relative;
+  }
+
+  .form__input-container:has(.form__input[aria-invalid="true"])::after {
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(./images/icon-error.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .form__input {
+    font-weight: var(--semibold);
+    width: 100%;
+    padding: 0.75rem;
+    outline: none;
+    border: 0.0625rem solid var(--gray_blue);
+    border-radius: 0.3125rem;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    transition: all 0.2s ease;
+  }
+
+  .form__input::placeholder {
+    color: var(--soft-dark_blue);
+    font-size: 0.875rem;
+    font-weight: var(--bold);
+  }
+
+  .form__input:is(:focus, :focus-visible, :active) {
+    border-color: var(--blue);
+  }
+
+  .form__input[aria-invalid="true"] {
+    color: var(--red);
+    border-color: var(--red);
+  }
+
+  .form__input[aria-invalid="true"]::placeholder {
+    color: var(--red);
+  }
+
+  .form__input[aria-invalid="true"] + .form__error-message {
+    display: block;
+    animation: show-error-message 0.5s ease-in;
+  }
+
+  .form__error-message {
+    display: none;
+    font-size: 0.625rem;
+    font-style: italic;
+    font-weight: var(--bold);
+    color: var(--red);
+    text-align: right;
+    margin-top: 0.3125rem;
+  }
+
+  .btn {
+    display: block;
+    height: max-content;
+    cursor: pointer;
+  }
+
+  .form__btn {
+    padding: 0.75rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: white;
+    border: none;
+    border-bottom: 0.1875rem solid var(--green-btn);
+    border-radius: 0.3125rem;
+    background-color: var(--green);
+    transition: all 0.2s ease-in;
+  }
+
+  .form__btn:is(:active) {
+    border-bottom: none;
+  }
+
+  .form__notice {
+    font-size: 0.625rem;
+    font-weight: var(--semibold);
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--gray_blue);
+    margin: 0 0.75rem;
+  }
+
+  .form__notice-link {
+    color: var(--red);
+    font-weight: var(--bold);
+  }
+
+  @media screen and (min-width: 64rem) {
+
+    .main {
+        gap: 3.75rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin: auto 2.5rem;
+    }
+
+    .content {
+        text-align: left;
+        margin: auto 0;
+    }
+
+    .content__title {
+        font-size: 3.125rem;
+        margin: 0;
+        margin-bottom: 2.1875rem;
+    }
+
+  }
+
+  @keyframes show-error-message {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+
+
+
+
+  
