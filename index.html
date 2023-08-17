@@ -25,26 +25,29 @@
                 <p class="ads-card__text"><span class="ads-card__text--highlighted">Try it free 7 days </span>then $20/mo. thereafter</p>
             </div>
             <form action="#" class="form">
-                <div class="form__input-container">
-                    <label for="firstName" class="form__label sr-only">First Name:</label>
-                    <input type="text" id="firstName" aria-errormessage="firstNameErrorMessage" class="form__input" placeholder="First Name" required>
-                    <p id="firstNameErrorMessage" aria-live="assertive" class="form__error-message">First Name cannot be empty</p>
-                </div>
-                <div class="form__input-container">
-                    <label for="lastName" class="form__label sr-only">Last Name:</label>
-                    <input type="text" id="lastName" aria-errormessage="lastNameErrorMessage" class="form__input" placeholder="Last Name" required>
-                    <p id="lastNameErrorMessage" aria-live="assertive" class="form__error-message">Last Name cannot be empty</p>
-                </div>
-                <div class="form__input-container">
-                    <label for="emailAddress" class="form__label sr-only">Email Address:</label>
-                    <input type="email" id="emailAddress" aria-errormessage="emailAddressErrorMessage" class="form__input" placeholder="Email Address" required>
-                    <p id="emailAddressErrorMessage" aria-live="assertive" class="form__error-message">Looks like this is not an email</p>
-                </div>
-                <div class="form__input-container">
-                    <label for="password" class="form__label sr-only">Password:</label>
-                    <input type="password" id="password" aria-errormessage="passwordErrorMessage" class="form__input" placeholder="Password" required>
-                    <p id="passwordErrorMessage" aria-live="assertive" class="form__error-message">Password cannot be empty</p>
-                </div>
+                <fieldset class="form__fieldset">
+                    <legend class="sr-only">Please Input your information:</legend>
+                    <div class="form__input-container">
+                        <label for="firstName" class="form__label sr-only">First Name:</label>
+                        <input type="text" id="firstName" aria-errormessage="firstNameErrorMessage" class="form__input" placeholder="First Name" required>
+                        <p id="firstNameErrorMessage" aria-live="assertive" class="form__error-message">First Name cannot be empty</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="lastName" class="form__label sr-only">Last Name:</label>
+                        <input type="text" id="lastName" aria-errormessage="lastNameErrorMessage" class="form__input" placeholder="Last Name" required>
+                        <p id="lastNameErrorMessage" aria-live="assertive" class="form__error-message">Last Name cannot be empty</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="emailAddress" class="form__label sr-only">Email Address:</label>
+                        <input type="email" id="emailAddress" aria-errormessage="emailAddressErrorMessage" class="form__input" placeholder="Email Address" required>
+                        <p id="emailAddressErrorMessage" aria-live="assertive" class="form__error-message">Looks like this is not an email</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="password" class="form__label sr-only">Password:</label>
+                        <input type="password" id="password" aria-errormessage="passwordErrorMessage" class="form__input" placeholder="Password" required>
+                        <p id="passwordErrorMessage" aria-live="assertive" class="form__error-message">Password cannot be empty</p>
+                    </div>
+                </fieldset>
                 <button type="submit" id="formBtn" class="btn form__btn">Claim your free trial</button>
                 <small class="form__notice">By clicking the button, you are agreeing to our <a href="#" class="form__notice-link">Terms and Services</a></small>
             </form>
