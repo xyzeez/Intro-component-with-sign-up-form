@@ -81,9 +81,10 @@
     /* accent colors */
     --blue: hsl(248, 32%, 49%);
 
-    /* box-shadows */
+    /* highlight colors */
     --blue-shadow: 0rem 0.5rem hsla(248, 22%, 30%, 40%);
-    --green-btn: hsl(154, 59%, 46%);
+    --green-btn-border: hsl(154, 59%, 46%);
+    --green-highlight: hsl(154, 65%, 68%);;
 
     /* font-weights */
     --regular: 400;
@@ -155,9 +156,7 @@
 
   .form {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(3, auto);
     padding: 1.5625rem;
     min-height: 30.6875rem;
     border-radius: 0.625rem;
@@ -165,8 +164,19 @@
     box-shadow: var(--blue-shadow);
   }
 
+  .form__fieldset {
+    display: grid;
+    grid-template-rows: repeat(6, fit-content);
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+    border: none;
+  }
+
   .form__input-container {
     position: relative;
+    margin-bottom: 1rem;
   }
 
   .form__input-container:has(.form__input[aria-invalid="true"])::after {
@@ -238,16 +248,21 @@
   }
 
   .form__btn {
-    padding: 0.75rem;
     font-weight: var(--bold);
     text-transform: uppercase;
     letter-spacing: 0.02em;
     color: white;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
     border: none;
-    border-bottom: 0.1875rem solid var(--green-btn);
+    border-bottom: 0.1875rem solid var(--green-btn-border);
     border-radius: 0.3125rem;
     background-color: var(--green);
     transition: all 0.2s ease-in;
+  }
+
+  .form__btn:is(:hover, :focus-visible, :active) {
+    background-color: var(--green-highlight);
   }
 
   .form__btn:is(:active) {
