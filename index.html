@@ -24,7 +24,7 @@
             <div class="ads-card form-container__ads-card">
                 <p class="ads-card__text"><span class="ads-card__text--highlighted">Try it free 7 days </span>then $20/mo. thereafter</p>
             </div>
-            <form action="#" class="form">
+            <form action="#" id="form" class="form" novalidate>
                 <fieldset class="form__fieldset">
                     <legend class="sr-only">Please Input your information:</legend>
                     <div class="form__input-container">
@@ -45,7 +45,7 @@
                     <div class="form__input-container">
                         <label for="password" class="form__label sr-only">Password:</label>
                         <input type="password" id="password" aria-errormessage="passwordErrorMessage" class="form__input" placeholder="Password" required>
-                        <p id="passwordErrorMessage" aria-live="assertive" class="form__error-message">Password cannot be empty</p>
+                        <p id="passwordErrorMessage" aria-live="assertive" class="form__error-message">Password must be between 8-16 characters</p>
                     </div>
                 </fieldset>
                 <button type="submit" id="formBtn" class="btn form__btn">Claim your free trial</button>
