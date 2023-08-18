@@ -228,7 +228,6 @@
 
   .form__input[aria-invalid="true"] + .form__error-message {
     display: block;
-    animation: show-error-message 0.5s ease-in;
   }
 
   .form__error-message {
@@ -303,19 +302,4 @@
         margin-bottom: 2.1875rem;
     }
 
-  }
-
-  @keyframes show-error-message {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-  }
-
-
-
-
-
-  
+  }  
