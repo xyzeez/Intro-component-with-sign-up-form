@@ -4,9 +4,9 @@ const nameInputs = document.querySelectorAll('.form__input[type="text"]');
 const emailInput = document.querySelector('#emailAddress');
 const passwordInput = document.querySelector('#password');
 
-let nameInputsEmpty;
-let emailInputEmpty;
-let passwordInputEmpty;
+let nameInputsEmpty = true;
+let emailInputEmpty = true;
+let passwordInputEmpty = true;
 const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
